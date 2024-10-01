@@ -6,7 +6,7 @@
 /*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 10:09:26 by yurolive          #+#    #+#             */
-/*   Updated: 2024/09/24 10:09:28 by yurolive         ###   ########.fr       */
+/*   Updated: 2024/09/30 16:21:09 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,17 @@ int	ft_handler_flags(va_list args, char format)
 	return (0);
 }
 
+int	ft_valid_flags(char format)
+{
+	if (format == 'c' || format == 's' || format == 'p')
+		return (1);
+	else if (format == 'd' || format == 'i' || format == 'u')
+		return (1);
+	else if (format == '%' || format == 'x' || format == 'X')
+		return (1);
+	return (0);
+}
+
 int	ft_printf(char const *str, ...)
 {
 	va_list	args;
@@ -55,14 +66,9 @@ int	ft_printf(char const *str, ...)
 	va_start(args, str);
 	while (str[i])
 	{
-		if (str[i] == '%')
-		{
-			i++;
-			if (str[i] == '\0')
-				break ;
-			len += ft_handler_flags(args, str[i]);
-		}
-		else
+		if (str[i] == '%' && ft_valid_flags(str[i + 1]) == 1)
+			len += ft_handler_flags(args, str[++i]);
+		else if (str[i] != '\0' && (str[i] != '%' || str[i + 1] != '\0'))
 			len += ft_putchar(str[i]);
 		i++;
 	}
