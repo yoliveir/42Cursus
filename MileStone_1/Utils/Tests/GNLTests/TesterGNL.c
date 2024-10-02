@@ -35,9 +35,9 @@ int main(void)
         printf("%s", line);
         free(line);
 		
-	// line = get_next_line(fd);
-    //     printf("%s", line);
-    //     free(line);
+	line = get_next_line(fd);
+	printf("%s", line);
+	free(line);
 
     //Lee el archivo línea por línea
     // while ((line = get_next_line(fd)) != NULL)
