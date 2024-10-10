@@ -4,9 +4,6 @@
 
   ![Project](https://img.shields.io/badge/Project-Libft-blue)
   ![Version](https://img.shields.io/badge/Version-1.0-green)
-  <a href="https://github.com/MiMendiola/Libft/tree/main/Documentation/es/README.md" >
-    <img src="https://img.shields.io/badge/Cambiar_Idioma-Español-purple" align="right">
-  </a>
 
 </div>
 
