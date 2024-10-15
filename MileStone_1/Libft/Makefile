@@ -6,87 +6,130 @@
 #    By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/17 11:55:41 by yurolive          #+#    #+#              #
-#    Updated: 2024/09/19 17:28:30 by yurolive         ###   ########.fr        #
+#    Updated: 2024/10/15 16:38:27 by yurolive         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Las Flags para compilar
 FLAG = -Wall -Wextra -Werror
+
+# Definicion de Colores
+RESET      = \033[0m
+RED        = \033[31m 
+GREEN      = \033[32m
+YELLOW     = \033[33m
+BLUE       = \033[34m
+CYAN       = \033[36m
+MAGENTA    = \033[35m
+
 # El nombre del "Programa"
 NAME = libft.a
-# Los Archivos "librerias" .c
-SRC = ft_isalpha.c \
-		ft_isdigit.c \
-		ft_isalnum.c \
-		ft_isascii.c \
-		ft_isprint.c \
-		ft_strlen.c \
-		ft_strlcpy.c \
-		ft_strlcat.c \
-		ft_strncmp.c \
-		ft_atoi.c \
-		ft_tolower.c \
-		ft_toupper.c \
-		ft_memset.c \
-		ft_bzero.c \
-		ft_memmove.c \
-		ft_memcpy.c \
-		ft_strnstr.c \
-		ft_strchr.c \
-		ft_strrchr.c \
-		ft_memchr.c \
-		ft_memcmp.c \
-		ft_calloc.c \
-		ft_strdup.c \
-		ft_substr.c \
-		ft_strjoin.c \
-		ft_strtrim.c \
-		ft_putchar_fd.c \
-		ft_putstr_fd.c \
-		ft_putendl_fd.c \
-		ft_putnbr_fd.c \
-		ft_strmapi.c \
-		ft_split.c \
-		ft_itoa.c \
-		ft_striteri.c \
-	  
-# Los Archivos "librerias" .o
-OBJ = ${SRC:.c=.o}
-# Los archivos "librerias" .c de Bonus
-BONUS = ft_lstnew_bonus.c \
-		ft_lstadd_front_bonus.c \
-		ft_lstsize_bonus.c \
-		ft_lstlast_bonus.c \
-		ft_lstadd_back_bonus.c \
-		ft_lstdelone_bonus.c \
-		ft_lstclear_bonus.c \
-		ft_lstiter_bonus.c \
-		ft_lstmap_bonus.c \
-# Los Archivos "librerias" .o de Bonus
-BONUS_OBJ = ${BONUS:.c=.o}
+
+# Los Archivos "librerias" .c (dentro de la carpeta SRC)
+SRC = SRC/Character/ft_isalpha.c \
+		SRC/Character/ft_isdigit.c \
+		SRC/Character/ft_isalnum.c \
+		SRC/Character/ft_isascii.c \
+		SRC/Character/ft_isprint.c \
+		SRC/Strings/ft_strlen.c \
+		SRC/Strings/ft_strlcpy.c \
+		SRC/Strings/ft_strlcat.c \
+		SRC/Strings/ft_strncmp.c \
+		SRC/Strings/ft_atoi.c \
+		SRC/Character/ft_tolower.c \
+		SRC/Character/ft_toupper.c \
+		SRC/Memory/ft_memset.c \
+		SRC/Memory/ft_bzero.c \
+		SRC/Memory/ft_memmove.c \
+		SRC/Memory/ft_memcpy.c \
+		SRC/Strings/ft_strnstr.c \
+		SRC/Strings/ft_strchr.c \
+		SRC/Strings/ft_strrchr.c \
+		SRC/Memory/ft_memchr.c \
+		SRC/Memory/ft_memcmp.c \
+		SRC/Memory/ft_calloc.c \
+		SRC/Strings/ft_strdup.c \
+		SRC/Strings/ft_substr.c \
+		SRC/Strings/ft_strjoin.c \
+		SRC/Strings/ft_strtrim.c \
+		SRC/Character/ft_putchar_fd.c \
+		SRC/Strings/ft_putstr_fd.c \
+		SRC/Strings/ft_putendl_fd.c \
+		SRC/Strings/ft_putnbr_fd.c \
+		SRC/Strings/ft_strmapi.c \
+		SRC/Strings/ft_split.c \
+		SRC/Strings/ft_itoa.c \
+		SRC/Strings/ft_striteri.c \
+		SRC/Lists/ft_lstnew_bonus.c \
+		SRC/Lists/ft_lstadd_front_bonus.c \
+		SRC/Lists/ft_lstsize_bonus.c \
+		SRC/Lists/ft_lstlast_bonus.c \
+		SRC/Lists/ft_lstadd_back_bonus.c \
+		SRC/Lists/ft_lstdelone_bonus.c \
+		SRC/Lists/ft_lstclear_bonus.c \
+		SRC/Lists/ft_lstiter_bonus.c \
+		SRC/Lists/ft_lstmap_bonus.c 
+
+# Los Archivos "librerias" .o (guárdalos en la carpeta OBJ)
+OBJ = $(SRC:%.c=OBJ/%.o)
+
 # Se refiere a lo ejecutable
-all: ${NAME}
+all: check_header ${NAME}
+
+# Verificar si se debe mostrar el encabezado
+check_header:
+	@if [ ! -f ${NAME} ]; then \
+		echo "${MAGENTA}"; \
+		echo "========================================="; \
+		echo "          LIBFT - BUILD PROCESS       "; \
+		echo "========================================="; \
+		echo "${RESET}"; \
+	else \
+		echo "${RED}=========================================${RESET}"; \
+		echo "${RED}   Make: Nothing to be done for 'all'${RESET}"; \
+		echo "${RED}=========================================${RESET}"; \
+		exit 0; \
+	fi
+
 # Creo el "Programa" a partir de los archivos .o
 ${NAME}: ${OBJ}
+	@echo "${YELLOW}=========================================${RESET}"
+	@echo "${YELLOW}Building ${NAME}...${RESET}"
 	@ar rcs ${NAME} ${OBJ}
-	@echo "${NAME} created and indexed"
-# Creo los archivos .o
-%.o: %.c
+	@echo "${GREEN}${NAME} created and indexed${RESET}"
+	@echo "${YELLOW}=========================================${RESET}"
+	@echo ""
+	
+# Crear los archivos .o (coloca los .o en la carpeta OBJ)
+OBJ/%.o: %.c
+	@mkdir -p $(dir $@)   # Crea las carpetas necesarias en OBJ
+	@echo "${YELLOW}=========================================${RESET}"
+	@echo "${YELLOW}Compiling $<...${RESET}"
 	@gcc ${FLAG} -c $< -o $@
+	@echo "${GREEN}Compiled $< into $@${RESET}"
+	@echo "${YELLOW}=========================================${RESET}"
+	@echo ""
+	
 # Borra los archivos .o
 clean:
-	@rm -f ${OBJ} ${BONUS_OBJ}
-	@echo "OBJ cleaned"
+	@echo "${MAGENTA}=========================================${RESET}"
+	@echo "${YELLOW}Cleaning object files...${RESET}"
+	@rm -f ${OBJ}
+	@echo "${GREEN}All object files cleaned.${RESET}"
+	@echo "${MAGENTA}=========================================${RESET}"
+	@echo ""
+	
 # Borra los archivos .o y el "Programa"
 fclean: clean
-	@rm -f ${OBJ} ${BONUS_OBJ}
+	@echo "${MAGENTA}=========================================${RESET}"
+	@echo "${YELLOW}Cleaning executables...${RESET}"
 	@rm -f ${NAME}
-	@echo "All objects and executable cleaned"
+	@echo "${GREEN}Executables cleaned.${RESET}"
+	@echo "${MAGENTA}=========================================${RESET}"
+	@echo ""
+	
 # Borra el "Programa" y recompila
 re: fclean all
-# Compila el "Programa" con los objetos de Bonus
-bonus: ${BONUS_OBJ} ${OBJ}
-	@ar rcs ${NAME} ${OBJ} ${BONUS_OBJ}
-	@echo "${NAME} created and indexed with bonus"
+
 # Indica a Make que no son archivos reales, sino nombres de objetivos, Esto evita conflictos si existieran archivos con esos mismos nombres.
-.PHONY:	all clean fclean re bonus
+.PHONY:	all clean fclean re check_header
