@@ -6,7 +6,7 @@
 #    By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/17 11:55:41 by yurolive          #+#    #+#              #
-#    Updated: 2024/10/15 16:38:27 by yurolive         ###   ########.fr        #
+#    Updated: 2024/10/21 14:16:10 by yurolive         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,7 +68,14 @@ SRC = SRC/Character/ft_isalpha.c \
 		SRC/Lists/ft_lstdelone_bonus.c \
 		SRC/Lists/ft_lstclear_bonus.c \
 		SRC/Lists/ft_lstiter_bonus.c \
-		SRC/Lists/ft_lstmap_bonus.c 
+		SRC/Lists/ft_lstmap_bonus.c \
+		SRC/GNL/get_next_line.c \
+		SRC/GNL/get_next_line_utils.c \
+		SRC/Printf/ft_printf.c \
+		SRC/Printf/ft_put_hex.c \
+		SRC/Printf/ft_put_un_nbr.c \
+		SRC/Printf/ft_putnbr_printf.c \
+		SRC/Printf/ft_putptr_hex.c
 
 # Los Archivos "librerias" .o (guárdalos en la carpeta OBJ)
 OBJ = $(SRC:%.c=OBJ/%.o)

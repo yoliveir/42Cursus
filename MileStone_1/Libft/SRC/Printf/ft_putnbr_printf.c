@@ -1,20 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putnbr_printf.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/23 19:55:55 by yuolivei          #+#    #+#             */
-/*   Updated: 2024/10/21 13:22:35 by yurolive         ###   ########.fr       */
+/*   Created: 2024/09/24 10:10:12 by yurolive          #+#    #+#             */
+/*   Updated: 2024/10/21 13:52:23 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
-/*Envía el carácter ’c’ al file descriptor especificado.*/
 
-int	ft_putchar_fd(char c, int fd)
+static int	ft_len_nbr(int nb)
 {
-	write(fd, &c, 1);
-	return (1);
+	int	len;
+
+	len = 0;
+	if (nb <= 0)
+	{
+		nb = -nb;
+		len++;
+	}
+	while (nb)
+	{
+		nb /= 10;
+		len++;
+	}
+	return (len);
+}
+
+int	ft_putnbr(int nb)
+{
+	ft_putnbr_fd(nb, 1);
+	return (ft_len_nbr(nb));
 }

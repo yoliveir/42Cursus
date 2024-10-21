@@ -6,7 +6,7 @@
 /*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 19:37:10 by yuolivei          #+#    #+#             */
-/*   Updated: 2024/10/15 16:39:55 by yurolive         ###   ########.fr       */
+/*   Updated: 2024/10/21 13:17:50 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static char	*ft_split_char(const char *str, int start, int finish, char **split)
 	return (word);
 }
 
-char	*aux_split(char	*new_word, int *index)
+static char	*aux_split(char	*new_word, int *index)
 {
 	*index = -1;
 	return (new_word);
