@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: yurolive <yurolive@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:32:24 by yurolive          #+#    #+#             */
-/*   Updated: 2024/10/14 17:11:45 by yurolive         ###   ########.fr       */
+/*   Updated: 2024/10/24 15:58:03 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	conv_bin(char *s, int pidserv)
 			else
 				kill(pidserv, SIGUSR2);
 			base = base / 2;
-			usleep(100);
+			usleep(400);
 		}
 		i++;
 	}
