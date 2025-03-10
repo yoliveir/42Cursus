@@ -1,5 +1,5 @@
 # CommonCore
-El Common Core de 42 Cursus - Set 2024 Set Hola
+El Common Core de 42 Cursus
 	
 | 💻 Project | 📝 Documentation | 💯 Score |
 |------|:-------:|:------------------:|
