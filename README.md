@@ -10,6 +10,8 @@ El Common Core de 42 Cursus
 | **📡 MiniTalk** | ❌ | [![125](https://img.shields.io/badge/125-2ea44f)]() |
 | **🔀 PushSwap** | ❌ | [![125](https://img.shields.io/badge/125-2ea44f)]() |
 | **🌀 Fract-ol** | ❌ | [![111](https://img.shields.io/badge/111-2ea44f)]() |
+| **🤔 Philosophers** | ❌ | [![100](https://img.shields.io/badge/100-2ea44f)]() |
+| **🐚 Minishell** | ❌ | [![100](https://img.shields.io/badge/100-2ea44f)]() |
 
 Printf - (In Libft - Need Revision)
 
