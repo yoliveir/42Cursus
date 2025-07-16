@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   safe_funcs.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kamil <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: yurolive <yurolive@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/25 11:10:14 by kamil             #+#    #+#             */
-/*   Updated: 2024/12/10 11:09:25 by kamil            ###   ########.fr       */
+/*   Created: 2025/03/15 13:17:39 by yurolive          #+#    #+#             */
+/*   Updated: 2025/04/21 19:47:41 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,6 @@ static void	handle_mutex_error(int status, t_opcode opcode)
 	else if (EBUSY == status && LOCK == opcode)
 		error_exit("Mutex is already locked (trylock failed)");
 }
-/* 
-	MUTEX SAFE
-	init
-	destroy
-	lock 
-	unlock
-*/
 
 void	safe_mutex_handle(t_mtx *mutex, t_opcode opcode)
 {

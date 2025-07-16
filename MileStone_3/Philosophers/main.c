@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kamil <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: yurolive <yurolive@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/22 14:09:00 by kamil             #+#    #+#             */
-/*   Updated: 2024/12/10 11:07:38 by kamil            ###   ########.fr       */
+/*   Created: 2025/03/28 15:45:20 by yurolive          #+#    #+#             */
+/*   Updated: 2025/04/21 19:51:07 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ int	main(int ac, char **av)
 		clean_data(&data);
 	}
 	else
-		error_exit("Wrong input\nnumber_of_philosophers time_to_die time_to_eat"
-			"time_to_sleep [number_of_times_each_philosopher_must_eat]");
+		error_exit("Wrong input\nnum_philosophers time_to_die time_to_eat"
+			" time_to_sleep [number_of_times_each_philosopher_must_eat]");
 }

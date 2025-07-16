@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kamil <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: yurolive <yurolive@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/25 11:08:35 by kamil             #+#    #+#             */
-/*   Updated: 2024/12/09 16:15:33 by kamil            ###   ########.fr       */
+/*   Created: 2025/03/28 11:05:02 by yurolive          #+#    #+#             */
+/*   Updated: 2025/04/21 19:21:47 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,6 @@ static void	assign_forks(t_philo *philo, t_fork *forks, int position)
 	philo_nbr = philo->data->philo_nbr;
 	philo->first_fork = &forks[(position + 1) % philo_nbr];
 	philo->second_fork = &forks[position];
-	if (philo->id % 2 == 0)
-	{
-		philo->second_fork = &forks[position];
-		philo->first_fork = &forks[(position + 1) % philo_nbr];
-	}
 }
 
 static void	philo_init(t_data *data)
