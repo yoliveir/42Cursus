@@ -13,4 +13,4 @@ El Common Core de 42 Cursus
 | **🤔 Philosophers** | ❌ | [![100](https://img.shields.io/badge/100-2ea44f)]() |
 | **🐚 Minishell** | ❌ | [![100](https://img.shields.io/badge/100-2ea44f)]() |
 | **🌐 NetPractice** | [![Documentation](https://img.shields.io/badge/Documentation-0077B5)]([https://github.com/yoliveir/42Cursus/tree/CommonCore/MileStone_1/Libft/#readme](https://github.com/lpaube/NetPractice)) | [![100](https://img.shields.io/badge/100-2ea44f)]() |
-| **🇨 Cpp0** | ❌ | [![100](https://img.shields.io/badge/100-2ea44f)]() |
+| **🇨 Cpp0** | ❌ | [![80](https://img.shields.io/badge/80-2ea44f)]() |
