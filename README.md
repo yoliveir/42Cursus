@@ -12,9 +12,5 @@ El Common Core de 42 Cursus
 | **🌀 Fract-ol** | ❌ | [![111](https://img.shields.io/badge/111-2ea44f)]() |
 | **🤔 Philosophers** | ❌ | [![100](https://img.shields.io/badge/100-2ea44f)]() |
 | **🐚 Minishell** | ❌ | [![100](https://img.shields.io/badge/100-2ea44f)]() |
-
-Printf - (In Libft - Need Revision)
-
-Get_Next_Line - (In Libft - Need Revision)
-
-Fract-ol - (Review Parameters Management, Julia)
+| **🌐 NetPractice** | [![Documentation](https://img.shields.io/badge/Documentation-0077B5)]([https://github.com/yoliveir/42Cursus/tree/CommonCore/MileStone_1/Libft/#readme](https://github.com/lpaube/NetPractice)) | [![100](https://img.shields.io/badge/100-2ea44f)]() |
+| **🇨 Cpp0** | ❌ | [![100](https://img.shields.io/badge/100-2ea44f)]() |
