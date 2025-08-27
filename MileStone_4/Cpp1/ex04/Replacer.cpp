@@ -6,7 +6,7 @@
 /*   By: yurolive <yurolive@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 18:08:28 by yurolive          #+#    #+#             */
-/*   Updated: 2025/08/27 18:08:32 by yurolive         ###   ########.fr       */
+/*   Updated: 2025/08/27 18:22:34 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ Replacer::Replacer(const std::string& filename, const std::string& s1, const std
     : filename(filename), s1(s1), s2(s2) {}
 
 bool Replacer::process() {
-    std::ifstream infile(filename);
+    std::ifstream infile(filename.c_str());
     if (!infile) {
         std::cerr << "Error: Cannot open input file." << std::endl;
         return false;
     }
 
-    std::ofstream outfile(filename + ".replace");
+    std::ofstream outfile((filename + ".replace").c_str());
     if (!outfile) {
         std::cerr << "Error: Cannot create output file." << std::endl;
         return false;
