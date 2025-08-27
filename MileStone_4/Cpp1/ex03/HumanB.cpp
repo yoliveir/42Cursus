@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: yurolive <yurolive@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 20:00:59 by yurolive          #+#    #+#             */
-/*   Updated: 2025/08/11 20:01:11 by yurolive         ###   ########.fr       */
+/*   Updated: 2025/08/27 17:58:29 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-HumanB::HumanB(const std::string& name) : name(name), weapon(nullptr) {}
+HumanB::HumanB(const std::string& name) : name(name), weapon(NULL) {}
 
 void HumanB::setWeapon(Weapon& weapon)
 {

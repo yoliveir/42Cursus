@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yurolive <yurolive@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: yurolive <yurolive@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 20:02:24 by yurolive          #+#    #+#             */
-/*   Updated: 2025/08/11 20:03:01 by yurolive         ###   ########.fr       */
+/*   Updated: 2025/08/27 17:52:43 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int main()
 {
     {
         Weapon club("crude spiked club");
+
         HumanA bob("Bob", club);
         bob.attack();
         club.setType("some other type of club");
@@ -25,6 +26,7 @@ int main()
     }
     {
         Weapon club("crude spiked club");
+
         HumanB jim("Jim");
         jim.attack();
         jim.setWeapon(club);
@@ -32,5 +34,6 @@ int main()
         club.setType("some other type of club");
         jim.attack();
     }
+
     return 0;
 }
