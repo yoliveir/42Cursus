@@ -6,7 +6,7 @@
 /*   By: yurolive <yurolive@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/19 17:24:22 by yurolive          #+#    #+#             */
-/*   Updated: 2025/09/19 17:29:39 by yurolive         ###   ########.fr       */
+/*   Updated: 2025/11/10 18:36:48 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,14 @@ public:
     Fixed(const Fixed& other);
     ~Fixed();
 
-    // ---- Operador de asignación ----
+    // ---- Operador de asignacion ----
     Fixed& operator=(const Fixed& other);
 
-    // ---- Conversión ----
+    // ---- Conversion ----
     float toFloat(void) const;
     int toInt(void) const;
 
-    // ---- Comparación ----
+    // ---- Comparacion ----
     bool operator>(const Fixed& rhs) const;
     bool operator<(const Fixed& rhs) const;
     bool operator>=(const Fixed& rhs) const;
@@ -43,17 +43,17 @@ public:
     bool operator==(const Fixed& rhs) const;
     bool operator!=(const Fixed& rhs) const;
 
-    // ---- Aritmética ----
+    // ---- Aritmetica ----
     Fixed operator+(const Fixed& rhs) const;
     Fixed operator-(const Fixed& rhs) const;
     Fixed operator*(const Fixed& rhs) const;
     Fixed operator/(const Fixed& rhs) const;
 
     // ---- Incremento / Decremento ----
-    Fixed& operator++();    // pre-incremento
-    Fixed operator++(int);  // post-incremento
-    Fixed& operator--();    // pre-decremento
-    Fixed operator--(int);  // post-decremento
+    Fixed& operator++();
+    Fixed operator++(int);
+    Fixed& operator--();
+    Fixed operator--(int);
 
     // ---- Métodos estáticos min/max ----
     static Fixed& min(Fixed& a, Fixed& b);
@@ -61,8 +61,6 @@ public:
     static Fixed& max(Fixed& a, Fixed& b);
     static const Fixed& max(const Fixed& a, const Fixed& b);
 
-    // ---- Sobrecarga de salida ----
-    friend std::ostream& operator<<(std::ostream& os, const Fixed& obj);
 };
 
 #endif //FIXED_HPP

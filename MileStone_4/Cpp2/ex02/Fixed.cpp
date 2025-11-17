@@ -6,7 +6,7 @@
 /*   By: yurolive <yurolive@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/19 17:26:54 by yurolive          #+#    #+#             */
-/*   Updated: 2025/09/19 17:30:02 by yurolive         ###   ########.fr       */
+/*   Updated: 2025/11/10 18:37:36 by yurolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ Fixed Fixed::operator--(int) { // post
     return tmp;
 }
 
-// ---- Métodos estáticos min/max ----
+// ---- Metodos estáticos min/max ----
 Fixed& Fixed::min(Fixed& a, Fixed& b) {
     return (a < b) ? a : b;
 }
