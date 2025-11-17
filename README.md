@@ -14,5 +14,5 @@ El Common Core de 42 Cursus
 | **🐚 Minishell** | ❌ | [![100](https://img.shields.io/badge/100-2ea44f)]() |
 | **🌐 NetPractice** | [![Documentation](https://img.shields.io/badge/Documentation-0077B5)](https://github.com/lpaube/NetPractice)| [![100](https://img.shields.io/badge/100-2ea44f)]() |
 | **🇨++ Cpp0** | ❌ | [![80](https://img.shields.io/badge/80-2ea44f)]() |
-| **🇨++ Cpp1** | ❌ | [![90](https://img.shields.io/badge/80-2ea44f)]() |
+| **🇨++ Cpp1** | ❌ | [![90](https://img.shields.io/badge/90-2ea44f)]() |
 | **🇨++ Cpp2** | ❌ | [![80](https://img.shields.io/badge/80-2ea44f)]() |
