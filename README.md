@@ -16,3 +16,5 @@ El Common Core de 42 Cursus
 | **🇨++ Cpp0** | ❌ | [![80](https://img.shields.io/badge/80-2ea44f)]() |
 | **🇨++ Cpp1** | ❌ | [![90](https://img.shields.io/badge/90-2ea44f)]() |
 | **🇨++ Cpp2** | ❌ | [![80](https://img.shields.io/badge/80-2ea44f)]() |
+| **🇨++ Cpp3** | ❌ | [![80](https://img.shields.io/badge/80-2ea44f)]() |
+| **🇨++ Cpp4** | ❌ | [![80](https://img.shields.io/badge/80-2ea44f)]() |
